@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href = "/Css/style.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <div class = "top">
+        <h2>Name: <%= name %></h2>
+        <h2>Id: <%= id %></h2>
+        <h4>please remember your id to sign in when you need</h4>
+    </div>
+    <div class = "bottom">
+        <form action="/newTodo" method="POST">
+            <input id="button2" type="submit" value="newTodo">
+        </form>
+    </div>
+    <div class = "todos">
+        <div class="todo">
+            <% if(!data[0]){ %> <h3>none</h3><% }  else{ 
+            if(data[0].done == "false"){ %>
+            <form action="/check/0/:_id/:cond" method="POST" id="checkform1"><input value="false"id="a"type="checkbox"></form> <% }else{ %>
+            <form action="/check/0/:_id/:cond" method="POST" id="checkform1"><input value="true"checked="true" id="a"type="checkbox"></form> <% } %>
+            <h3><%= data[0].title %></h3>
+            <h4><%= data[0].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[1]){ %> <h3>none</h3><% }  else{ 
+            if(data[1].done == "false"){ %>
+            <form action="/check/1/:_id/:cond" method="POST" id="checkform2"><input value="false"id="b"type="checkbox"></form> <% }else{ %>
+            <form action="/check/1/:_id/:cond" method="POST" id="checkform2"><input value="true" checked="true" id="b"type="checkbox"></form><% } %>
+            <h3><%= data[1].title %></h3>
+            <h4><%= data[1].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[2]){ %> <h3>none</h3><% }  else{ 
+                if(data[2].done == "false"){ %>
+                <form action="/check/2/:_id/:cond" method="POST" id="checkform3"><input value="false"id="c"type="checkbox"></form> <% }else{ %>
+                <form action="/check/2/:_id/:cond" method="POST" id="checkform3"><input value="true" checked="true" id="c"type="checkbox"></form><% } %>
+            <h3><%= data[2].title %></h3>
+            <h4><%= data[2].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[3]){ %> <h3>none</h3><% }  else{
+                if(data[3].done == "false"){ %>
+                <form action="/check/3/:_id/:cond" method="POST" id="checkform4"><input value="false"id="d"type="checkbox"></form> <% }else{ %>
+                <form action="/check/3/:_id/:cond" method="POST" id="checkform4"><input value="true" checked="true" id="d"type="checkbox"></form><% } %>
+            <h3><%= data[3].title %></h3>
+            <h4><%= data[3].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[4]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check/4":_id method="POST" id="checkform5"><input name="false" id="e"type="checkbox"></form>
+            <h3><%= data[4].title %></h3>
+            <h4><%= data[4].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[5]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check5" :_idmethod="POST" id="checkform6"><input name="false" id="f"type="checkbox"></form>
+            <h3><%= data[5].title %></h3>
+            <h4><%= data[5].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[6]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check6" :_idmethod="POST" id="checkform7"><input name="false" id="g"type="checkbox"></form>
+            <h3><%= data[6].title %></h3>
+            <h4><%= data[6].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[7]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check7" :_idmethod="POST" id="checkform8"><input name="false" id="h"type="checkbox"></form>
+            <h3><%= data[7].title %></h3>
+            <h4><%= data[7].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[8]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check8" :_idmethod="POST" id="checkform9"><input name="false" id="i"type="checkbox"></form>
+            <h3><%= data[8].title %></h3>
+            <h4><%= data[8].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[9]){ %> <h3>none</h3><% }  else{ %>
+            <form action="/check9" :_idmethod="POST" id="checkform10"><input name="false" id="j"type="checkbox"></form>
+            <h3><%= data[9].title %></h3>
+            <h4><%= data[9].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[10]){ %> <h3>none</h3> <% } else{ %>
+            <form action="/check10":_id method="POST" id="checkform11"><input name="false" id="k"type="checkbox"></form>
+            <h3><%= data[10].title %></h3>
+            <h4><%= data[10].description %></h4><% } %>
+        </div>
+        <div class="todo">
+            <% if(!data[11]){ %> <h3>none</h3> <% } else{ %>
+            <form action="/check11":_id method="POST" id="checkform12"><input name="false" id="l"type="checkbox"></form>
+            <h3><%= data[11].title %></h3>
+            <h4><%= data[11].description %></h4><% } %>
+        </div>
+    </div>
+    <p id="id"><%= id %></p>
+    <script src="/JS/main.js" type="module">
+        
+    </script>
+</body>
+</html>

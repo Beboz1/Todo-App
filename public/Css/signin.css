@@ -1,0 +1,28 @@
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    background-color: aliceblue;
+    width: 300px;
+    border: 1px lightblue solid;
+}
+.button{
+    margin-top: 30px;
+    margin-left: 95px;
+    color: rgb(255, 255, 255);
+    background: rgb(71, 0, 138);
+    height: 50px;
+    width: 100px;
+    border: 2px rgb(79, 0, 120) solid;
+}
+.button:hover{
+    background: rgb(60, 0, 100);
+    cursor:pointer;
+}
+form{
+    margin-top: 300px;
+    display:grid;
+    justify-content: center;
+}

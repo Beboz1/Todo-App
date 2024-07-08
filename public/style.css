@@ -1,0 +1,22 @@
+#button1, #button2{
+    background: white;
+    padding: 5px;
+    width: 120px;
+    margin: 10px;
+}
+#button1:hover, #button2:hover{
+    cursor: pointer;
+    background: rgb(206, 204, 204);
+    color: rgb(68, 6, 47);
+}
+body{
+    display:grid;
+    justify-content: center;
+}
+img{
+    width: 500px;
+    height: 200px;
+}
+form{
+    display:flex;
+}

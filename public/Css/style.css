@@ -1,0 +1,75 @@
+h2{
+    color: royalblue;
+    margin: 6px;
+}
+body{
+    display:grid;
+    grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px;
+    grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
+}
+
+.top{
+    padding:10px;
+    border: 3px orange double;
+    display:flex;
+    grid-row-start:1;
+    grid-row-end:1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    display:grid;
+    grid-template-columns: 2fr 8fr 3fr;
+}
+.bottom{
+    display:flex;
+    display:grid;
+    align-items: center;
+    border: 3px orange double;
+    grid-row-start:8;
+    grid-row-end:9;
+    grid-column-start: 1;
+    grid-column-end: 9;
+}
+
+.todos{
+    border: 3px orange double;
+    grid-row-start:2;
+    grid-row-end:8;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.todo{
+    color: lightblue;
+    border: 1px solid black;
+    padding: 5px;
+    background: gray;
+}
+.todo:hover{
+    background: rgb(90, 89, 89);
+    color: rgb(149, 212, 233);
+}
+#title{
+    margin:5px;
+    padding: 10px;
+}
+#description{
+    margin: 6px;
+    padding: 10px;
+}
+#signup{
+    display:flex;
+    margin: 10px;
+}
+
+#button2{
+    background: white;
+    padding: 5px;
+    width: 120px
+}
+#button2:hover{
+    cursor: pointer;
+    background: rgb(206, 204, 204);
+    color: rgb(68, 6, 47);
+}
