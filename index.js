@@ -113,7 +113,7 @@ app.get("/users/:_id", async(req, res)=>{
     }
     
 })
-app.listen(3000, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log("App is listening on port 3000")
 })
 module.exports = Username
