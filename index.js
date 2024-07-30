@@ -38,7 +38,6 @@ app.post("/check/:todo/:_id/:cond", async(req, res)=>{
     async function update(){
         await Todo.findOneAndUpdate({description:description}, {done:cond})
         let data2 = await Todo.find({userId:id})
-        console.log(data)
         console.log(data2)
         res.redirect("/users/"+req.params._id)
     }
